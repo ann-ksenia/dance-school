@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+	<title>Perfect I</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Sen:wght@800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Sen:wght@800&display=swap" rel="stylesheet">
+	<link rel="icon" href="static/css/img/minilogo.png">
+
+	<script scr=""></script>
+	<style> @import url('https://fonts.googleapis.com/css2?family=Sen:wght@800&display=swap'); </style>
+	<style> @import url('https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap'); </style>
+	<style> @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Sen:wght@800&display=swap'); </style>
+
+</head>
+<body>
+	{% include 'inc/_nav.html' %}
+	<main>
+		<section class="main-page" >
+			<div class="main-page-left-side">
+				<img src="static/css/img/pic.png" class="full-logo">
+				<img src="static/css/img/main_page_left_image.png" class="main-page-left-image">
+			</div>
+			<div class="main-page-center">
+				<div class="name">
+					<!-- <h1 class="dance-school">ШКОЛА ТАНЦЕВ</h1>
+					<h1 class="Perfect-I"><strong><b>PERFECT I</b></strong></h1>
+					<p class="hello">Hello-hello! Annyohasseo!</p> -->
+					<img src="static/css/img/name.png" width="500px" id="form">
+				</div>
+					<form class="form">
+						<p class="form-head">ЗАПИСАТЬСЯ НА БЕСПЛАТНОЕ ПРОБНОЕ ЗАНЯТИЕ</p>
+						<input type="text" name="" class="form-input form-input-name" placeholder="Имя">
+						<input type="phone" name="" class="form-input form-input-phone" placeholder="+7 (9ХХ) ХХ-ХХ-ХХ">
+						<input type="submit" name="" class="form-input-button" value="">
+						<br>
+						<small class="form-input-small">Нажимая на кнопку Вы соглашаетесь с нашей политикой конфиденциальности. Мы Вам перезвоним после того, как вы запишитесь.</small>
+					</form>
+			</div>
+			<img src="static/css/img/main_page_right_image.png" class="main-page-right-image" title="Korean girls-group PIXY" id="main-page">
+		</section>
+
+		<section class="group-page" id="group-page">
+			<div class="fixed-container">
+				<h2 class="header-colored">ТАНЦЕВАЛЬНЫЕ&nbsp; </h2>
+				<h2 class="header-usual">&nbsp; НАПРАВЛЕНИЯ</h2>
+				<div class="buttons">
+					<input type="button" class="group-button" value="BOYS GROUP" id="Boys">
+					<input type="button" class="group-button" value="GIRLS GROUP" id="Girls">
+					<input type="button" class="group-button" value="TREND GROUP" id="Trend">
+				</div>
+				<div class="group-descriprion" id="Dboys">
+						<p class="group-descriprion-text"><b> Boys group </b>- направление нашей школы, на занятиях которого ученики тренируют хореографию <b>мужских </b>kpop-групп. Вместе с учениками выбирается хореография, которую будут преподавать. Посещать занятия могут и девочки, и мальчики.</p>
+						<img src="static/css/img/group_description.png" class="group-descriprion-image" alt="Boys-band BTS" title="Korean boys-band BTS">
+						<a href="#form"><input type="button" class="sign-up" value="ЗАПИСАТЬСЯ"></a>
+				</div>
+				<div class="group-descriprion" id="Dgirls" style="display: none;">
+						<p class="group-descriprion-text"><b> Girls group </b>- направление нашей школы, на занятиях которого ученики тренируют хореографию <b>женских </b>kpop-групп. Вместе с учениками выбирается хореография, которую будут преподавать. Посещать занятия могут и девочки, и мальчики.</p>
+						<img src="static/css/img/girls_group.jpg" class="group-descriprion-image" alt="Boys-band BTS" title="Korean boys-band BTS">
+						<a href="#form"><input type="button" class="sign-up" value="ЗАПИСАТЬСЯ"></a>
+				</div>
+				<div class="group-descriprion" id="Dtrend" style="display: none;">
+						<p class="group-descriprion-text"><b> Trends group </b>- направление нашей школы, на занятиях которого ученики тренируют хореографию <b>, завирусившуюся в социальных сетях</b>. Вместе с учениками выбирается хореография, которую будут преподавать. Посещать занятия могут и девочки, и мальчики.</p>
+						<img src="static/css/img/trend.jpg" class="group-descriprion-image" alt="Boys-band BTS" title="Korean boys-band BTS">
+						<a href="#form"><input type="button" class="sign-up" value="ЗАПИСАТЬСЯ"></a>
+				</div>
+				<br>
+				<small class="small">Расписание каждoй из групп Вы можете найти в разделе меню "Расписание".</small>
+			</div>
+		</section>
+
+		<section class="archive-page" id="archive-page">
+			<div class="fixed-container">
+				<h2 class="header-colored">АРХИВ&nbsp; </h2>
+				<h2 class="header-usual">&nbsp; ШКОЛЫ</h2>
+
+				<div class="bodys">
+						<section class="carousel" aria-label="Gallery">
+						  <ol class="carousel__viewport">
+						    <li id="carousel__slide1"
+						        tabindex="0"
+						        class="carousel__slide">
+						      <div class="carousel__snapper">
+						        <img src="static/css/img/group_description.png" class="media">
+						        <a href="#carousel__slide4"
+						           class="carousel__prev">Go to last slide</a>
+						        <a href="#carousel__slide2"
+						           class="carousel__next">Go to next slide</a>
+						      </div>
+						    </li>
+
+						    <li id="carousel__slide2"
+						        tabindex="0"
+						        class="carousel__slide">
+						      <div class="carousel__snapper">
+						      <iframe src="https://www.youtube.com/embed/262hmHGMANE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="media"></iframe></div>
+						      <a href="#carousel__slide1"
+						         class="carousel__prev">Go to previous slide</a>
+						      <a href="#carousel__slide3"
+						         class="carousel__next">Go to next slide</a>
+						    </li>
+
+						    <li id="carousel__slide3"
+						        tabindex="0"
+						        class="carousel__slide">
+						      <div class="carousel__snapper">
+						      <img src="static/css/img/main_page_left_image.png" class="media"></div>
+						      <a href="#carousel__slide2"
+						         class="carousel__prev">Go to previous slide</a>
+						      <a href="#carousel__slide4"
+						         class="carousel__next">Go to next slide</a>
+						    </li>
+
+						    <li id="carousel__slide4"
+						        tabindex="0"
+						        class="carousel__slide">
+						      <div class="carousel__snapper">
+						        <iframe src="https://www.youtube.com/embed/262hmHGMANE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="media"></iframe>
+						      </div>
+						      <a href="#carousel__slide3"
+						         class="carousel__prev">Go to previous slide</a>
+						      <a href="#carousel__slide1"
+						         class="carousel__next">Go to first slide</a>
+						    </li>
+						  </ol>
+						</section>
+					</div>
+				<div class="buttons">
+					<button class="group-button">ВКонтакте</button>
+					<button class="group-button">Twitter</button>
+					<button class="group-button">YouTube</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="archive-page" id="teachers-page">
+			<div class="fixed-container">
+				<h2 class="header-colored">ПЕДАГОГИ&nbsp; </h2>
+				<h2 class="header-usual">&nbsp; ШКОЛЫ</h2>
+				<div class="teachers-center">
+				<div class="teachers">
+					<div class="teacher">
+						<iframe src="https://www.youtube.com/embed/262hmHGMANE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="teacher-video"></iframe>
+						<br>
+						<p class="teacher-name">Карина Долгова</p>
+						<br>
+						<a href="https://vk.com/ann_ksenia">
+							<img src="static/css/img/links.png" class="links">
+						</a>
+					</div>
+					<div class="teacher">
+						<iframe src="https://www.youtube.com/embed/iSBKTC9L7Fw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="teacher-video"></iframe>
+						<br>
+						<p class="teacher-name">Катя Шляпкина</p>
+						<br>
+						<a href="https://vk.com/ann_ksenia">
+							<img src="static/css/img/links.png" class="links">
+						</a>
+					</div>
+					<div class="teacher">
+						<iframe src="https://www.youtube.com/embed/Zw6w3skoiOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="teacher-video"></iframe>
+						<br>
+						<p class="teacher-name">Денис Волкин</p>
+						<br>
+						<a href="https://vk.com/ann_ksenia" target="_blank">
+							<img src="static/css/img/links.png" class="links">
+						</a>
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+
+		<section class="timetable-page" id="timetable-page">
+			<div class="fixed-container">
+				<h2 class="header-colored">РАСПИСАНИЕ&nbsp; </h2>
+				<h2 class="header-usual">&nbsp; ЗАНЯТИЙ</h2>
+				<div class="timetable"></div>
+				<a href="#form"><input type="button" class="sign-up" value="ЗАПИСАТЬСЯ"></a>
+			</div>
+		</section>
+
+		<section id="prices-page">
+			<div class="fixed-container">
+				<h2 class="header-colored">ЦЕНЫ&nbsp; </h2>
+				<h2 class="header-usual">&nbsp;НА АБОНЕМЕНТЫ</h2>
+
+				<!-- <div class="prices-list-scroll">
+					<div class="prices-list">
+						<img src="img/price1.png" class="price">
+						<img src="img/price1.png" class="price">
+						<img src="img/price1.png" class="price">
+						<img src="img/price1.png" class="price">
+						<img src="img/price1.png" class="price">
+						<img src="img/price1.png" class="price">
+					</div>
+				</div> -->
+
+
+				<div class="gallery">
+					<figure>
+						<img src="static/css/img/price1.png" class="price">
+					</figure>
+					<figure>
+						<img src="static/css/img/price2.png" class="price">
+					</figure>
+					<figure>
+						<img src="static/css/img/price3.png" class="price">
+					</figure>
+					<figure>
+						<img src="static/css/img/price4.png" class="price">
+					</figure>
+					<figure>
+						<img src="static/css/img/price5.png" class="price">
+					</figure>
+					<figure>
+						<img src="static/css/img/price6.png" class="price">
+					</figure>
+				</div>
+			</div>
+		</section>
+	</main>
+	{% include 'inc/_footer.html' %}
+
+<script>
+		document.getElementById("Boys").onclick = Fboys;
+		document.getElementById("Girls").onclick = Fgirls;
+		document.getElementById("Trend").onclick = Ftrend;
+
+		  function Fboys()
+		  {
+
+		    document.getElementById("Dboys").style = "display:block;";
+		    document.getElementById("Dgirls").style = "display:none;";
+		    document.getElementById("Dtrend").style = "display:none;";
+		  }
+		  function Fgirls()
+		  {
+		    document.getElementById("Dgirls").style = "display:block;";
+		    document.getElementById("Dboys").style = "display:none;";
+		    document.getElementById("Dtrend").style = "display:none;";
+		  }
+		  function Ftrend()
+		  {
+		    document.getElementById("Dtrend").style = "display:block;";
+		    document.getElementById("Dgirls").style = "display:none;";
+		    document.getElementById("Dboys").style = "display:none;";
+		  }
+
+	</script>
+</body>
+</html>

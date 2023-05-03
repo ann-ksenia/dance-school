@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+	<title>Профиль</title>
+</head>
+<body>
+{% include 'inc/_nav.html' %}
+ <br>
+<br>
+	<div class="fixed-container">
+		<div style="float: left; width: 400px; height: 551px; margin-right: 50px">
+			<img src="{{ request.user.profile.photo.url }}" style=" width: 400px; height: 500px; object-fit: cover; border: 14px solid #FA1559;" >
+		</div>
+
+		<div class="profile2">
+			<h3 class="h33"> Добро пожаловать, {{ user.username }}
+			| <a href="{% url 'logout' %}" style="text-decoration: none; color:black; font-family:Arial; font-size:16px">ВЫЙТИ</a></h3>
+			<hr style="border: 2px solid #7EFF9B; ">
+			<p class="p1">Номер телефона: {{request.user.profile.phone}}</p>
+			<p class="p1">Почта: {{request.user.profile.email}}</p>
+			<img src="{% static 'css/img/price1.png' %}" style="float:left; width: 300px; margin-bottom:0px;">
+
+		</div>
+		<div class="visits">
+			<p style="text-align:center; margin-bottom:0;"  class="p1">Ваши посещения:</p>
+			{% if user.profile.visits == '' %}
+			<p class="p1" style="padding:0;margin:0; ">У вас еще нет посещений по текущему абонементу.</p>
+			{%else%}
+
+			<p class="p1" style="padding:0;margin:0; ">{{user.profile.visits}}</p>
+			{%endif%}
+		</div>
+		<small style="float:left;margin:0; padding:0;">Ваш абонемент. Купить новый абонемент можно будет здесь, после истечения срока текущего.</small>
+		<a href="{% url 'edit'  %}" ><input type="button" name="user.profile.pk" value="Редактировать профиль" class="group-button" style="border-radius: 2px;
+		padding: 10px 20px;
+		border: 0px;
+		background-color: #7EFF9B;
+		float: right; width: auto; margin-top:52px"></a>
+	</div>
+ {% include 'inc/_footer.html' %}
+</body>
+
+<style type="text/css">
+	.profile2{
+		margin-left: 50px;
+		height: 100%;
+	}
+	.h33{
+		font-size: 26px;
+		font-family: 'Sen', sans-serif;
+		padding:0;
+		margin:0;
+	}
+	.p1{
+		font-size: 20px;
+		font-family: 'Sen', sans-serif;
+	}
+</style>
+</html>

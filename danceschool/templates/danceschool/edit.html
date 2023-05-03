@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'inc/_nav.html' %}
+{% load widget_tweaks %}
+    <div class="fixed-container" style="text-align: center">
+        <h5>Редактирование профиля</h5>
+<!--    <form method="post" enctype="multipart/form-data">-->
+<!--        {% csrf_token %}-->
+<!--&lt;!&ndash;                <p class="p1">Имя пользователя:</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                {{form.username|add_class:"form-field"}}&ndash;&gt;-->
+<!--&lt;!&ndash;                <br>&ndash;&gt;-->
+<!--        <p class="p1">Фото:</p>-->
+<!--                {{form.photo}}-->
+<!--                <br>-->
+<!--        <p class="p1">Телефон:</p>-->
+<!--                {{form.phone|add_class:"form-field phone"}}-->
+<!--                <br>-->
+<!--        <p class="p1">Почта:</p>-->
+<!--                {{form.email|add_class:"form-field"}}-->
+<!--                <br>-->
+<!--                <br><br><br>-->
+<!--        <button type="submit" class="group-button">Сохранить</button>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--    </form>-->
+        <div class="form-content">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label class="small mb-1 p1">Имя:</label><br>
+                            {{ user_form.username|add_class:"form-field" }}
+                    </div>
+                    <div class="form-group"><br>
+                        <a href="{% url 'password' %}">Изменить пароль</a>
+                        <hr>
+                        <label class="small mb-1 p1" style="margin-bottom:0; padding:0">Аватарка:</label><br>
+                        <p style="margin:0; padding:0">Текушая аватарка:</p><img src="{{ request.user.profile.photo.url }}" style=" width: 100px; height: 125px; object-fit: cover; border: 5px solid #FA1559;margin-bottom:0; padding:0" >
+                        <br>{{ profile_form.photo }}<br><br>
+                    </div>
+                    <label class="small mb-1 p1">Телефон::</label><br> {{ profile_form.phone|add_class:"form-field" }}<br><br>
+                    <label class="small mb-1 p1">Почта:</label> <br>{{ profile_form.email|add_class:"form-field" }}
+
+                </div>
+            </div>
+            <br><br>
+            <button type="submit" class="btn btn-dark btn-lg group-button">Save Changes</button>
+        </form>
+             <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    </div>
+
+{% include 'inc/_footer.html' %}
+
+</body>
+<style>
+    footer
+    {
+        position: absolute;
+        bottom: 0;
+    }
+    .form-field{
+        border-radius: 5px;
+        height: 40px;
+        border:1px solid grey;
+        padding: 10px 20px;
+        width:auto;
+        font-size:20px;
+        background-color:;
+    }
+    .form-field:focus{
+    border: 3px solid green;
+    }
+     .p1{
+    font-size: 20px;
+    font-family:Arial;
+    margin-bottom:0;
+    }
+    h5{
+    font-size: 30px;
+    margin-bottom:2px;
+    font-family:Arial;
+    font-weight: normal;
+    }
+    a{
+    text-decoration:none;
+    font-size: 20px;
+    color:blue;}
+</style>
+</html>
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <title>Title</title>
+</head>
+<body style = "min-height:100vh;">
+    {% include 'inc/_nav.html' %}
+    {% load widget_tweaks %}
+    <br>
+    <br>
+    <div class="fixed-container" style="text-align:center;">
+        <img src="{% static 'css/img/jk.png' %}" style="float:left; width:280px">
+        <div style="float:left; margin-left:40px">
+            <form method="post">
+                {% csrf_token %}
+                <p class="p1">Имя пользователя:</p>
+                {{form.username|add_class:"form-field"}}
+                <br>
+                <p class="p1">Пароль:</p>
+                {{form.password|add_class:"form-field"}}
+                <br><br><br>
+                <button type="submit" class="group-button" style="width:auto">Войти</button>
+            </form>
+            <h5> Или <a href="{% url 'sign up' %}"> зарегистрируйтесь </a>, если у Вас еще нет аккаунта. </h5>
+            <img src="https://i.gifer.com/av.gif" style="width:200px">
+        </div>
+        <img src="{% static 'css/img/jin.png' %}" style="float:right; height:530px">
+    </div>
+
+
+    {% include 'inc/_footer.html' %}
+</body>
+<style>
+    footer
+    {
+        position: absolute;
+        bottom: 0;
+    }
+    .form-field{
+        border-radius: 5px;
+        height: 40px;
+        border:1px solid grey;
+        padding: 10px 20px;
+        width:auto;
+        font-size:20px;
+        background-color:;
+    }
+    .form-field:focus{
+    border: 3px solid green;
+    }
+
+    .p1{
+    font-size: 20px;
+    font-family:Arial;
+    margin-bottom:0;
+    }
+    h5{
+    font-size: 14px;
+    font-family:Arial;
+    font-weight: normal;
+    }
+    a{
+    text-decoration:none;}
+</style>
+</html>

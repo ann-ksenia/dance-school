@@ -1,0 +1,26 @@
+{% load static %}
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<header>
+	<div class="top-bar">
+		<div class="header-container">
+				<div >
+					<nav class="nav">
+						<a href="{% url 'home' %}#main-page"><img src="{% static 'css/img/logo.png' %}" class="header-logo"></a>
+						<ul>
+							<li><a href="{% url 'home' %}#group-page">НАПРАВЛЕНИЯ</a></li>
+							<li><a href="{% url 'home' %}#archive-page">АРХИВ</a></li>
+							<li><a href="{% url 'home' %}#teachers-page">ПЕДАГОГИ</a></li>
+							<li><a href="{% url 'home' %}#timetable-page">РАСПИСАНИЕ</a></li>
+							<li><a href="{% url 'home' %}#prices-page">ЦЕНЫ</a></li>
+							<li><a href="#{% url 'home' %}#footer">КОНТАКТЫ</a></li>
+						</ul>
+
+						<a href="{% url 'login' %}"><img src="{% static 'css/img/profile.png' %}" class="profile"></a>
+						<a href="#main-page"><img src="{% static 'css/img/phone.png' %}" class="nav-icon"></a>
+					</nav>
+				</div>
+		</div>
+	</div>
+</header>
